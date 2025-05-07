@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haπ Gallery | Photography</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Haπ Gallery</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="toggle-label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('assets/images/photos/hero1.jpg')"></div>
+            <div class="slide" style="background-image: url('assets/images/photos/hero2.jpg')"></div>
+            <div class="slide" style="background-image: url('assets/images/photos/hero3.jpg')"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h2>Capturing Moments, Creating Art</h2>
+            <p>Welcome to Haπ Gallery, where photography meets passion</p>
+            <a href="gallery.html" class="btn btn-primary">Explore Gallery</a>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="mouse">
+                <span class="scroll"></span>
+            </span>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Welcome to Haπ Gallery</h2>
+                <p class="lead">Step into the world of Haπ Gallery, a personal sanctuary where passion for photography comes to life.</p>
+                <p>As an avid photographer, I capture moments from diverse places, transforming them into visual stories that resonate with beauty, emotion, and wonder. Each photograph in this gallery is a glimpse into my journey, an exploration of the world through my lens.</p>
+                <a href="about.html" class="btn btn-outline">Read More</a>
+            </div>
+            <div class="about-image">
+                <img src="assets/images/photos/photographer.jpg" alt="Photographer" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="featured-collections">
+        <div class="container">
+            <h2 class="section-title">Featured Collections</h2>
+            
+            <div class="collections-grid">
+                <div class="collection-item">
+                    <a href="gallery.html?category=nature">
+                        <div class="collection-image">
+                            <img src="assets/images/photos/nature.jpg" alt="Nature Photography" class="img-fluid">
+                        </div>
+                        <h3>Nature</h3>
+                    </a>
+                </div>
+                
+                <div class="collection-item">
+                    <a href="gallery.html?category=urban">
+                        <div class="collection-image">
+                            <img src="assets/images/photos/urban.jpg" alt="Urban Photography" class="img-fluid">
+                        </div>
+                        <h3>Urban</h3>
+                    </a>
+                </div>
+                
+                <div class="collection-item">
+                    <a href="gallery.html?category=portrait">
+                        <div class="collection-image">
+                            <img src="assets/images/photos/portraits.jpg" alt="Portrait Photography" class="img-fluid">
+                        </div>
+                        <h3>Portraits</h3>
+                    </a>
+                </div>
+                
+                <div class="collection-item">
+                    <a href="gallery.html?category=travel">
+                        <div class="collection-image">
+                            <img src="assets/images/photos/travel.jpg" alt="Travel Photography" class="img-fluid">
+                        </div>
+                        <h3>Travel</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Showcase -->
+    <section class="book-showcase">
+        <div class="container">
+            <div class="book-content">
+                <h2 class="section-title">L'ELIXIR DU RENOUVEAU</h2>
+                <p class="lead">Discover my literary work that complements my visual artistry</p>
+                <p>Explore themes of renewal and transformation through both words and images in my published book, now available on Amazon.</p>
+                <a href="https://www.amazon.fr/LELIXIR-DU-RENOUVEAU-Happy-AZONDEKON-ebook/dp/B0CQKDJD6S" target="_blank" class="btn btn-primary">Get the Book</a>
+            </div>
+            <div class="book-image">
+                <img src="assets/images/book-cover.jpg" alt="L'ELIXIR DU RENOUVEAU Book Cover" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-feed">
+        <div class="container">
+            <h2 class="section-title">Follow My Journey</h2>
+            <p class="feed-intro">Stay updated with my latest captures on Instagram</p>
+            
+            <div class="instagram-grid">
+                <!-- Instagram feed will be loaded via JavaScript -->
+                <div class="insta-placeholder">
+                    <a href="https://instagram.com/happy_artofficiel" target="_blank" class="insta-link">
+                        <img src="assets/images/photos/insta1.jpg" alt="Instagram Photo" class="img-fluid">
+                    </a>
+                </div>
+                <div class="insta-placeholder">
+                    <a href="https://instagram.com/happy_artofficiel" target="_blank" class="insta-link">
+                        <img src="assets/images/photos/insta2.jpg" alt="Instagram Photo" class="img-fluid">
+                    </a>
+                </div>
+                <div class="insta-placeholder">
+                    <a href="https://instagram.com/happy_artofficiel" target="_blank" class="insta-link">
+                        <img src="assets/images/photos/insta3.jpg" alt="Instagram Photo" class="img-fluid">
+                    </a>
+                </div>
+                <div class="insta-placeholder">
+                    <a href="https://instagram.com/happy_artofficiel" target="_blank" class="insta-link">
+                        <img src="assets/images/photos/insta4.jpg" alt="Instagram Photo" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="instagram-cta">
+                <a href="https://instagram.com/happy_artofficiel" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-instagram"></i> Follow @happy_artofficiel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Stay Updated</h2>
+            <p>Subscribe to receive news about my latest photoshoots and gallery updates</p>
+            
+            <form id="newsletter-form" class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Haπ Gallery</h2>
+                    <p>Capturing moments, creating memories</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:fxmakerman@gmail.com">fxmakerman@gmail.com</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2290191721391" target="_blank">+229 01 91 72 13 91</a></p>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/happy_artofficiel" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Haπ Gallery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+        <script src="js/gallery.js"></script>
+        <script src="js/animation.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haπ Gallery | Contact</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Haπ Gallery</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                
+                <div class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="toggle-label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="gallery-header">
+        <h1>Get In Touch</h1>
+        <p>Let's connect and create something beautiful together</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p class="lead">I'd love to hear from you! Whether you're interested in purchasing prints, collaborating on a project, or just want to say hello, please feel free to reach out.</p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:happyazondekon@gmail.com">happyazondekon@gmail.com</a></p>
+                        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/22991721391" target="_blank">+229 91 72 13 91</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Cotonou, Benin</p>
+                    </div>
+                    
+                    <h3>Follow Me</h3>
+                    <p>Stay connected and see my latest work on social media</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/happy_artofficiel" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-control">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Me</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127126.37241495627!2d2.2976053!3d6.3702857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023542b11e4fc25%3A0x7c0a0dab6be26a59!2sCotonou%2C%20Benin!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius: var(--border-radius-md); box-shadow: var(--shadow-medium);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>Do you offer photography services for events?</h3>
+                    <p>Yes, I offer photography services for various events including weddings, corporate events, family gatherings, and more. Please contact me with your specific needs for customized packages.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I purchase prints of your photographs?</h3>
+                    <p>Absolutely! Most of the photographs in my gallery are available for purchase as prints. You can specify your preferred size and finish. Contact me directly for pricing and availability.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer photography workshops or classes?</h3>
+                    <p>Yes, I periodically offer workshops for photographers of all levels. These workshops cover various aspects of photography from technical skills to artistic expression. Subscribe to my newsletter to stay updated on upcoming workshops.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What areas do you service?</h3>
+                    <p>I'm based in Cotonou, Benin, but I'm available for travel both nationally and internationally. Travel fees may apply depending on the location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Stay Updated</h2>
+            <p>Subscribe to receive news about my latest photoshoots, gallery updates, and upcoming events</p>
+            
+            <form id="newsletter-form" class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Haπ Gallery</h2>
+                    <p>Capturing moments, creating memories</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:fxmakerman@gmail.com">fxmakerman@gmail.com</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2290191721391" target="_blank">+229 01 91 72 13 91</a></p>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/happy_artofficiel" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Haπ Gallery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+        <script src="js/gallery.js"></script>
+        <script src="js/animation.js"></script>
+    <script>
+        // Form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would normally send the form data to your server
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

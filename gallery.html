@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Haπ Gallery | Photography</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Haπ Gallery</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="toggle-label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('assets/images/photos/gallery-header.jpg')">
+        <div class="container">
+            <h1>Photography Gallery</h1>
+            <p>Explore my visual journey through the lens</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="urban">Urban</button>
+                <button class="filter-btn" data-filter="portrait">Portraits</button>
+                <button class="filter-btn" data-filter="travel">Travel</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+        <div class="container">
+            <div class="gallery-container">
+                <!-- Nature Category -->
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/nature1.jpg" alt="Nature Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <button class="btn-view" data-image="assets/images/photos/gallery/nature1.jpg" data-title="Morning Dew" data-desc="Sunrise at the forest edge, capturing the first light as it filters through the morning mist and illuminates the dewdrops on leaves.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/nature2.jpg" alt="Nature Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <button class="btn-view" data-image="assets/images/photos/gallery/nature2.jpg" data-title="Mountain Majesty" data-desc="The majestic alpine peaks glowing with golden light during sunset, showcasing nature's grand architecture and timeless beauty.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/nature4.jpg" alt="Nature Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                
+                                <button class="btn-view" data-image="assets/images/photos/gallery/nature4.jpg" data-title="Mountain Majesty" data-desc="The majestic alpine peaks glowing with golden light during sunset, showcasing nature's grand architecture and timeless beauty.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/nature5.jpg" alt="Nature Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                            
+                                <button class="btn-view" data-image="assets/images/photos/gallery/nature5.jpg" data-title="Mountain Majesty" data-desc="The majestic alpine peaks glowing with golden light during sunset, showcasing nature's grand architecture and timeless beauty.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/nature6.jpg" alt="Nature Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/nature6.jpg" data-title="Mountain Majesty" data-desc="The majestic alpine peaks glowing with golden light during sunset, showcasing nature's grand architecture and timeless beauty.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/nature7.jpg" alt="Nature Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/nature7.jpg" data-title="Mountain Majesty" data-desc="The majestic alpine peaks glowing with golden light during sunset, showcasing nature's grand architecture and timeless beauty.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/nature8.jpg" alt="Nature Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/nature8.jpg" data-title="Mountain Majesty" data-desc="The majestic alpine peaks glowing with golden light during sunset, showcasing nature's grand architecture and timeless beauty.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/nature3.jpg" alt="Nature Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                
+                                <button class="btn-view" data-image="assets/images/photos/gallery/nature3.jpg" data-title="Ocean Whispers" data-desc="The rhythmic dance of coastal waves at twilight, where the ocean meets the shore in a timeless conversation of sound and motion.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Urban Category -->
+                <div class="gallery-item" data-category="urban">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/urban1.jpg" alt="Urban Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                
+                                <button class="btn-view" data-image="assets/images/photos/gallery/urban1.jpg" data-title="City Lights" data-desc="The vibrant energy of the downtown skyline at night, with buildings illuminated and streets alive with the rhythm of urban life.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="urban">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/urban2.jpg" alt="Urban Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                
+                                <button class="btn-view" data-image="assets/images/photos/gallery/urban2.jpg" data-title="Street Perspective" data-desc="A study in urban architecture and lines, capturing the geometric patterns and structural elegance that define our modern cities.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="urban">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/urban3.jpg" alt="Urban Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                
+                                <button class="btn-view" data-image="assets/images/photos/gallery/urban3.jpg" data-title="Urban Reflection" data-desc="Modern architecture captured in the perfect symmetry of water reflection, creating a dreamlike urban landscape that blends reality with illusion.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="urban">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/urban4.jpg" alt="Urban Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/urban4.jpg" data-title="Street Perspective" data-desc="A study in urban architecture and lines, capturing the geometric patterns and structural elegance that define our modern cities.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="urban">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/urban5.jpg" alt="Urban Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/urban5.jpg" data-title="Street Perspective" data-desc="A study in urban architecture and lines, capturing the geometric patterns and structural elegance that define our modern cities.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="urban">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/urban6.jpg" alt="Urban Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/urban6.jpg" data-title="Street Perspective" data-desc="A study in urban architecture and lines, capturing the geometric patterns and structural elegance that define our modern cities.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="urban">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/urban7.jpg" alt="Urban Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/urban7.jpg" data-title="Street Perspective" data-desc="A study in urban architecture and lines, capturing the geometric patterns and structural elegance that define our modern cities.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="urban">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/urban8.jpg" alt="Urban Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/urban8.jpg" data-title="Street Perspective" data-desc="A study in urban architecture and lines, capturing the geometric patterns and structural elegance that define our modern cities.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <!-- Portrait Category -->
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/portrait1.jpg" alt="Portrait Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                
+                                <button class="btn-view" data-image="assets/images/photos/gallery/portrait1.jpg" data-title="Natural Light Portrait" data-desc="Environmental portraiture that captures the essence of the subject in their natural element, using only available light to create depth and authenticity.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/portrait2.jpg" alt="Portrait Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                
+                                <button class="btn-view" data-image="assets/images/photos/gallery/portrait2.jpg" data-title="Character Study" data-desc="A character study focusing on the subtle nuances of facial expression that reveal the depth of human personality and emotion.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/portrait3.jpg" alt="Portrait Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                
+                                <button class="btn-view" data-image="assets/images/photos/gallery/portrait3.jpg" data-title="Cultural Portrait" data-desc="Celebrating cultural heritage through portraiture, featuring traditional attire and symbolic elements that tell stories of identity and ancestry.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/portrait4.jpg" alt="Portrait Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/portrait4.jpg" data-title="Cultural Portrait" data-desc="Celebrating cultural heritage through portraiture, featuring traditional attire and symbolic elements that tell stories of identity and ancestry.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/portrait5.jpg" alt="Portrait Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/portrait5.jpg" data-title="Cultural Portrait" data-desc="Celebrating cultural heritage through portraiture, featuring traditional attire and symbolic elements that tell stories of identity and ancestry.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/portrait6.jpg" alt="Portrait Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/portrait6.jpg" data-title="Cultural Portrait" data-desc="Celebrating cultural heritage through portraiture, featuring traditional attire and symbolic elements that tell stories of identity and ancestry.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/portrait7.jpg" alt="Portrait Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/portrait7.jpg" data-title="Cultural Portrait" data-desc="Celebrating cultural heritage through portraiture, featuring traditional attire and symbolic elements that tell stories of identity and ancestry.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/portrait8.jpg" alt="Portrait Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/portrait8.jpg" data-title="Cultural Portrait" data-desc="Celebrating cultural heritage through portraiture, featuring traditional attire and symbolic elements that tell stories of identity and ancestry.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Travel Category -->
+                <div class="gallery-item" data-category="travel">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/travel1.jpg" alt="Travel Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                
+                                <button class="btn-view" data-image="assets/images/photos/gallery/travel1.jpg" data-title="Ancient Pathways" data-desc="Journeying through historical sites where ancient pathways tell stories of civilizations past, capturing the enduring legacy of human architecture and design.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="travel">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/travel2.jpg" alt="Travel Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/travel2.jpg" data-title="Market Colors" data-desc="The vibrant tapestry of local markets, where colors, textures, and aromas create a sensory celebration of culture and commerce.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="travel">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/travel4.jpg" alt="Travel Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/travel4.jpg" data-title="Market Colors" data-desc="The vibrant tapestry of local markets, where colors, textures, and aromas create a sensory celebration of culture and commerce.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="travel">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/travel5.jpg" alt="Travel Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/travel5.jpg" data-title="Market Colors" data-desc="The vibrant tapestry of local markets, where colors, textures, and aromas create a sensory celebration of culture and commerce.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="travel">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/travel6.jpg" alt="Travel Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/travel6.jpg" data-title="Market Colors" data-desc="The vibrant tapestry of local markets, where colors, textures, and aromas create a sensory celebration of culture and commerce.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="travel">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/travel7.jpg" alt="Travel Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/travel7.jpg" data-title="Market Colors" data-desc="The vibrant tapestry of local markets, where colors, textures, and aromas create a sensory celebration of culture and commerce.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="travel">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/travel8.jpg" alt="Travel Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                 
+                                <button class="btn-view" data-image="assets/images/photos/gallery/travel8.jpg" data-title="Market Colors" data-desc="The vibrant tapestry of local markets, where colors, textures, and aromas create a sensory celebration of culture and commerce.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="travel">
+                    <div class="gallery-image">
+                        <img src="assets/images/photos/gallery/travel3.jpg" alt="Travel Photography" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+
+                                <button class="btn-view" data-image="assets/images/photos/gallery/travel3.jpg" data-title="Coastal Village" data-desc="The tranquil rhythm of life in a coastal village, where the relationship between community and sea creates a timeless way of living.">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button id="load-more" class="btn btn-outline">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Full Image View -->
+    <div class="modal" id="image-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="Full size image">
+            <div class="modal-info">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+            </div>
+            <div class="modal-nav">
+                <button id="prev-img" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-img" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Stay Updated</h2>
+            <p>Subscribe to receive news about my latest photoshoots and gallery updates</p>
+            
+            <form id="newsletter-form" class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Haπ Gallery</h2>
+                    <p>Capturing moments, creating memories</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:fxmakerman@gmail.com">fxmakerman@gmail.com</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2290191721391" target="_blank">+229 01 91 72 13 91</a></p>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/happy_artofficiel" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Haπ Gallery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/animation.js"></script>
+</body>
+</html>
