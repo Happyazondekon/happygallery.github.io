@@ -50,6 +50,9 @@
     --shadow-medium: 0 4px 12px rgba(255,255,255,0.1);
     --shadow-large: 0 8px 24px rgba(255,255,255,0.1);
 }
+[data-theme="dark"] .collection-item h3 {
+    color: #ffffff;
+}
 
 /* Global Reset */
 * {
@@ -487,117 +490,6 @@ img {
     max-height: 500px;
     box-shadow: var(--shadow-large);
     border-radius: var(--border-radius-md);
-}
-
-/* ===== Instagram Feed ===== */
-.instagram-feed {
-    padding: var(--spacing-xl) 0;
-    text-align: center;
-}
-
-.feed-intro {
-    text-align: center;
-    margin-bottom: var(--spacing-md);
-}
-
-.instagram-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
-}
-
-.insta-placeholder {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--border-radius-sm);
-    transition: transform var(--transition-fast);
-}
-
-.insta-placeholder:hover {
-    transform: scale(1.03);
-}
-
-.insta-placeholder::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity var(--transition-fast);
-    z-index: 1;
-}
-
-/* ===== Instagram Feed ===== */
-.instagram-feed {
-    padding: var(--spacing-xl) 0;
-    text-align: center;
-}
-
-.feed-intro {
-    text-align: center;
-    margin-bottom: var(--spacing-md);
-}
-
-.instagram-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
-}
-
-.insta-placeholder {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--border-radius-sm);
-    transition: transform var(--transition-fast);
-}
-
-.insta-placeholder:hover {
-    transform: scale(1.03);
-}
-
-.insta-placeholder::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity var(--transition-fast);
-    z-index: 1;
-}
-
-.insta-placeholder:hover::before {
-    opacity: 1;
-}
-
-.insta-link::after {
-    content: '\f16d';
-    font-family: 'Font Awesome 6 Brands';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    color: white;
-    font-size: 2rem;
-    z-index: 2;
-    opacity: 0;
-    transition: transform var(--transition-fast), opacity var(--transition-fast);
-}
-
-.insta-link:hover::after {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-}
-
-.instagram-cta {
-    margin-top: var(--spacing-md);
 }
 
 /* ===== Responsive Styles ===== */
@@ -1231,18 +1123,6 @@ img {
     --shadow-large: 0 8px 24px rgba(0,0,0,0.1);
 }
 
-/* Dark Mode Variables */
-[data-theme="dark"] {
-    --color-primary: #121212;
-    --color-secondary: #ffffff;
-    --color-bg-alt: #1e1e1e;
-    --color-text-light: #121212;
-    --color-text-dark: #f8f9fa;
-    --color-light-gray: #2d2d2d;
-    --shadow-small: 0 2px 5px rgba(255,255,255,0.1);
-    --shadow-medium: 0 4px 12px rgba(255,255,255,0.1);
-    --shadow-large: 0 8px 24px rgba(255,255,255,0.1);
-}
 
 /* Global Reset */
 * {
@@ -1891,14 +1771,6 @@ img {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.gallery-filters {
-    padding: var(--spacing-md) 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
-}
 
 .filter-btn {
     padding: 0.5rem 1rem;
@@ -1908,6 +1780,9 @@ img {
     font-family: var(--font-accent);
     cursor: pointer;
     transition: all var(--transition-fast);
+}
+[data-theme="dark"] .filter-btn {
+    color: #ffffff;
 }
 
 .filter-btn:hover,
@@ -2163,7 +2038,21 @@ img {
     color: white;
     font-size: 1rem;
 }
+/* ===== Gallery Header Styles ===== */
+.gallery-header {
+    color: white !important; /* Force white text in both themes */
+}
 
+.gallery-header h1,
+.gallery-header p {
+    color: inherit !important; /* Inherit the white color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Dark theme adjustments for gallery header */
+body.dark-theme .gallery-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/photos/gallery-header.jpg') !important;
+}
 /* Projects Section Styles */
 .projects-section {
     padding: 5rem 0;
@@ -2250,4 +2139,5 @@ img {
     .project-image {
         height: 180px;
     }
+
 }
