@@ -8,6 +8,110 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCounters();
 });
 
+// Configuration des particules
+const config = {
+  particleCount: 150,  // Augmentation du nombre de particules
+  maxSize: 5,         // Taille maximale réduite
+  colors: [
+    'rgba(224, 168, 0, 0.3)',    // Or
+    'rgba(128, 198, 36, 0.3)',    // Acier
+    'rgba(151, 219, 112, 0.3)',   // Violet
+    'rgba(64, 224, 208, 0.3)',    // Turquoise
+    'rgba(66, 42, 201, 0.3)'    // Rose
+  ],
+  shapes: ['circle', 'rect', 'triangle', 'cross']
+};
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('micro-particles');
+  container.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  `;
+
+  // Création des particules
+  for (let i = 0; i < config.particleCount; i++) {
+    const particle = document.createElement('div');
+    const size = Math.random() * config.maxSize + 1;
+    const shape = config.shapes[Math.floor(Math.random() * config.shapes.length)];
+    const color = config.colors[Math.floor(Math.random() * config.colors.length)];
+    
+    particle.style.cssText = `
+      position: absolute;
+      width: ${size}px;
+      height: ${size}px;
+      background: ${color};
+      opacity: ${Math.random() * 0.5 + 0.1};
+      border-radius: ${shape === 'circle' ? '50%' : '0'};
+      transform: rotate(${Math.random() * 360}deg);
+      pointer-events: none;
+      mix-blend-mode: overlay;
+    `;
+
+    if (shape === 'cross') {
+      particle.style.background = 'none';
+      particle.style.borderLeft = `1px solid ${color}`;
+      particle.style.borderRight = `1px solid ${color}`;
+      particle.style.transform += ' rotate(45deg)';
+    }
+
+    // Position initiale aléatoire
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.top = `${Math.random() * 100}%`;
+
+    // Animation
+    const duration = Math.random() * 30 + 20;
+    const delay = Math.random() * -duration;
+    
+    particle.style.animation = `
+      floatParticle ${duration}s linear ${delay}s infinite
+    `;
+
+    container.appendChild(particle);
+  }
+
+  // Création des keyframes dynamiquement
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes floatParticle {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(90deg);
+      }
+      50% {
+        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(180deg);
+      }
+      75% {
+        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(270deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(360deg);
+      }
+    }
+  `;
+  document.head.appendChild(style);
+});
+
+// Adaptation pour le dark mode
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('change', () => {
+    const particles = document.querySelectorAll('#micro-particles div');
+    particles.forEach(p => {
+      p.style.mixBlendMode = themeToggle.checked ? 'screen' : 'overlay';
+    });
+  });
+}
+
 /**
  * Add parallax scrolling effect to specified elements
  */
