@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalImg = document.getElementById('modal-image');
     const modalTitle = document.getElementById('modal-title');
     const modalDesc = document.getElementById('modal-desc');
-    const closeModal = document.querySelector('.close-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn'); // Nouveau sélecteur par ID
     const prevBtn = document.getElementById('prev-img');
     const nextBtn = document.getElementById('next-img');
     
@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const galleryImages = document.querySelectorAll('.gallery-image img');
         galleryImages.forEach(img => {
             const src = img.getAttribute('src');
+            // Don't try to preload empty src
+            if (!src) return;
+            
             // Charger l'image mais ne pas l'afficher tout de suite
             img.style.opacity = '0';
             loadImage(img, src);
@@ -54,12 +57,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewButtons = document.querySelectorAll('.btn-view');
     viewButtons.forEach((button, index) => {
         button.addEventListener('click', function() {
+            // Skip buttons with no image source
+            if (!this.getAttribute('data-image')) return;
+            
             currentImageIndex = index;
             images = Array.from(viewButtons).map(btn => ({
                 src: btn.getAttribute('data-image'),
                 title: btn.getAttribute('data-title') || '',
                 desc: btn.getAttribute('data-desc') || ''
-            }));
+            })).filter(img => img.src); // Filter out empty sources
+            
             openModal(images[currentImageIndex]);
         });
     });
@@ -86,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close modal
     function closeModalFunc() {
+        console.log('Closing modal');
         modal.classList.remove('show');
         document.body.style.overflow = '';
     }
@@ -101,16 +109,66 @@ document.addEventListener('DOMContentLoaded', function() {
         openModal(images[currentImageIndex]);
     }
     
-    // Event listeners
-    closeModal.addEventListener('click', closeModalFunc);
+    // Event listeners - NOUVEAU CODE pour le bouton de fermeture
+    if (closeModalBtn) {
+        console.log('Close button found:', closeModalBtn);
+        
+        closeModalBtn.addEventListener('click', function() {
+            console.log('Close button clicked');
+            closeModalFunc();
+        });
+    } else {
+        console.error('Close modal button not found! Make sure you have updated the HTML.');
+        
+        // Fallback: try to add a close button if it doesn't exist
+        if (document.querySelector('.modal-content') && !document.getElementById('close-modal-btn')) {
+            console.log('Adding fallback close button');
+            const fallbackBtn = document.createElement('button');
+            fallbackBtn.id = 'close-modal-btn';
+            fallbackBtn.className = 'close-modal-btn';
+            fallbackBtn.innerHTML = '<i class="fas fa-times"></i>';
+            fallbackBtn.setAttribute('aria-label', 'Fermer');
+            
+            document.querySelector('.modal-content').prepend(fallbackBtn);
+            
+            fallbackBtn.addEventListener('click', function() {
+                console.log('Fallback close button clicked');
+                closeModalFunc();
+            });
+        }
+    }
+    
+    // Click outside to close
     modal.addEventListener('click', function(e) {
         if (e.target === modal) {
             closeModalFunc();
         }
     });
     
+    // Navigation buttons
     nextBtn.addEventListener('click', showNextImage);
     prevBtn.addEventListener('click', showPrevImage);
+    
+    // Add touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    modalImg.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    }, false);
+    
+    modalImg.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            showNextImage(); // Swipe left, next image
+        } else if (touchEndX > touchStartX + 50) {
+            showPrevImage(); // Swipe right, prev image
+        }
+    }
     
     // Keyboard navigation
     document.addEventListener('keydown', function(e) {
