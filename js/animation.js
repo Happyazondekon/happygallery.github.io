@@ -17,7 +17,7 @@ function initializeParticles() {
     // Configuration with responsive settings
     const config = {
         // Base settings
-        particleCount: 250,
+        particleCount: 150,
         maxSize: 5,
         colors: [
             'rgba(224, 168, 0, 0.3)',    // Or
@@ -29,8 +29,8 @@ function initializeParticles() {
         shapes: ['circle', 'rect', 'triangle', 'cross'],
         
         // Mobile settings
-        mobileParticleCount: 30,  // Significantly reduced for mobile
-        mobileMaxSize: 3,         // Smaller particles for mobile
+        mobileParticleCount: 15,  // Significantly reduced for mobile
+        mobileMaxSize: 4,         // Smaller particles for mobile
         mobileAnimationDuration: 30, // Slower animations on mobile to reduce CPU usage
     };
 
@@ -50,21 +50,6 @@ function initializeParticles() {
 
     // Detect device type
     const isMobile = window.innerWidth <= 768;
-    
-    // Check if dark mode is enabled
-    const isDarkMode = document.documentElement.classList.contains('dark-mode') || 
-                       document.body.classList.contains('dark-mode') ||
-                       localStorage.getItem('theme') === 'dark' ||
-                       window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // If mobile AND dark mode, hide container and exit early (no particles)
-    if (isMobile && isDarkMode) {
-        container.style.display = 'none';
-        return;
-    }
-    
-    // Make sure container is visible (in case it was hidden before)
-    container.style.display = 'block';
     
     // Apply device-specific settings
     const particleCount = isMobile ? config.mobileParticleCount : config.particleCount;
@@ -170,44 +155,14 @@ function initializeParticles() {
         }
     }, 250));
     
-    // Listen for system dark mode changes
-    if (window.matchMedia) {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-            if (isMobile) {
-                // If mobile and switched to dark mode, hide particles
-                if (event.matches) {
-                    container.style.display = 'none';
-                } else {
-                    // If mobile and switched to light mode, show particles
-                    container.style.display = 'block';
-                    // Reinitialize particles
-                    container.innerHTML = '';
-                    initializeParticles();
-                }
-            }
-        });
-    }
-    
     // Handle theme toggle
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
         themeToggle.addEventListener('change', () => {
-            // Check if we're on mobile
-            if (window.innerWidth <= 768) {
-                // If switching to dark mode on mobile, hide particles
-                if (themeToggle.checked) {
-                    container.style.display = 'none';
-                } else {
-                    // If switching to light mode on mobile, show particles
-                    container.style.display = 'block';
-                }
-            } else {
-                // For desktop, just adjust the blend mode
-                const particles = document.querySelectorAll('#micro-particles div');
-                particles.forEach(p => {
-                    p.style.mixBlendMode = themeToggle.checked ? 'screen' : 'overlay';
-                });
-            }
+            const particles = document.querySelectorAll('#micro-particles div');
+            particles.forEach(p => {
+                p.style.mixBlendMode = themeToggle.checked ? 'screen' : 'overlay';
+            });
         });
     }
 }
