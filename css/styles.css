@@ -2010,7 +2010,7 @@ img {
 
 /* Dark theme adjustments for gallery header */
 body.dark-theme .gallery-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/photos/gallery-header.jpg') !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../') !important;
 }
 /* Projects Section Styles */
 .projects-section {
